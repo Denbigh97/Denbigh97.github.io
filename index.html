@@ -1,294 +1,110 @@
-<!doctype html>
-<html class="no-icon-fonts" lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="referrer" content="origin-when-cross-origin">
-<link rel="canonical" href="https://www.espn.com/nba/scoreboard" />
-<title>NBA Basketball Scores - NBA Scoreboard - Project_2_Red_Team</title>
-<meta name="description" content="Real-time NBA Basketball scores on Project_2_Red_Team" />
-<meta name="news_keywords" content="NBA scores, NBA scoreboard, Basketball scores, Basketball scoreboard" />
-<meta name="keywords" content="NBA scores, NBA scoreboard, Basketball scores, Basketball scoreboard" />
-<meta property="fb:app_id" content="116656161708917" />
-<meta property="og:site_name" content="ESPN.com" />
-<meta property="og:url" content="https://www.espn.com/nba/scoreboard" />
-<meta property="og:title" content="NBA Basketball Scores - NBA Scoreboard - Project_2_Red_Team"/>
-<meta property="og:description" content="Real-time NBA Basketball scores on Project_2_Red_Team" />
-<meta property="og:image" content="https://a1.espncdn.com/combiner/i?img=%2Fi%2Fespn%2Fespn_logos%2Fespn_red.png"/>
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:type" content="website" />
-<meta name="title" content="NBA Basketball Scores - NBA Scoreboard - Project_2_Red_Team"/>
-<meta name="medium" content="website" />
-    <!-- define Plotly -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!DOCTYPE html>
+<html>
 
-    <!-- Bootstrap core CSS     -->
-    <!-- <link href="./templates/bootstrap.min.css" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="https://nba-projectred.herokuapp.com/static/assets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-    <!-- Animation library for notifications   -->
-    <link href="https://nba-projectred.herokuapp.com/static/assets/css/animate.min.css" rel="stylesheet"/>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
-    <!--  Light Bootstrap Table core CSS    -->
-    <link href="https://nba-projectred.herokuapp.com/static/assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
-    
-
-
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <!-- <link href="static/assets/css/demo.css" rel="stylesheet" /> -->
-
-    <!--     Fonts and icons     -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="https://nba-projectred.herokuapp.com/static/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-    
-    <!-- map css -->
-    <link href="https://nba-projectred.herokuapp.com/static/assets/css/styleChloro.css" rel="stylesheet" />
-    <!-- Leaflet CSS & JS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="crossorigin=""></script>
-
-    <!--D3 cdn-->
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.js"></script>
-    <script type="text/javascript" src="static/assets/js/plot.js"></script>
-    <style type="text/css">
-        .custom {
-            font-family: Roboto,Arial,sans-serif;
-            color: rgb(255, 255, 255);
-            font-size:20px;
-        }
-        </style>
-    
-
+<head>
+  <title>PUT A TITLE HERE</title>
 </head>
+
 <body>
+  <canvas id="canvas" width="200" height="200"></canvas>
 
-
-    <div class="wrapper">
-        <div class="sidebar" data-color="blue" data-image="static/assets/img/nba.png">
-    
-        <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
-    
-    
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="#" class="custom">
-                        NBA Data Analytics 
-                    </a>
-                </div>
-    
-                <ul class="nav">
-                    <li class="active">
-                        <a href="/">
-                            <i class="pe-7s-graph"></i>
-                            <p>Home</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.espn.com/nba/schedule">
-                            <i class="pe-7s-users"></i>
-                            <p>Schedule</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.espn.com/nba/standings">
-                            <i class="pe-7s-note2"></i>
-                            <p>Standings</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://hoopshype.com/salaries/">
-                            <i class="pe-7s-note2"></i>
-                            <p>Salaries</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.espn.com/nba/scoreboard">
-                            <i class="pe-7s-note2"></i>
-                            <p>Scores</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://hoopshype.com/category/top-rumors/">
-                            <i class="pe-7s-note2"></i>
-                            <p>News</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-        <div class="main-panel">
-            <nav class="navbar navbar-default navbar-fixed" style="background-color: #021b2b;">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/">
-                            <span class="custom">Home</span>
-                        </a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  </a>
-                                  <ul class="dropdown-menu">
-
-                                  </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <p>
-                                            <span class="custom">Teams</span>
-                                            
-                                            <b class="caret"></b>
-                                        </p>
-    
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <li class="menu-item"><a href="hawks.html">Atlanta Hawks</a></li>
-                                    <li class="menu-item"><a href="celtics.html">Boston Celtics</a></li>
-                                    <li class="menu-item"><a href="nets.html">Brooklyn Nets</a></li>
-                                    <li class="menu-item"><a href="hornets.html">Charlotte Hornets</a></li>
-                                    <li class="menu-item"><a href="bulls.html">Chicago Bulls</a></li>
-                                    <li class="menu-item"><a href="cavaliers.html">Cleveland Cavaliers</a></li>
-                                    <li class="menu-item"><a href="mavericks.html">Dallas Mavericks</a></li>
-                                    <li class="menu-item"><a href="nuggets.html">Denver Nuggets</a></li>
-                                    <li class="menu-item"><a href="pistons.html">Detroit Pistons</a></li>
-                                    <li class="menu-item"><a href="warriors.html">Golden State Warriors</a></li>
-                                    <li class="menu-item"><a href="rockets.html">Houston Rockets</a></li>
-                                    <li class="menu-item"><a href="pacers.html">Indiana Pacers</a></li>
-                                    <li class="menu-item"><a href="clippers.html">LA Clippers</a></li>
-                                    <li class="menu-item"><a href="lakers.html">Los Angeles Lakers</a></li>
-                                    <li class="menu-item"><a href="grizzlies.html">Memphis Grizzlies</a></li>
-                                    <li class="menu-item"><a href="heat.html">Miami Heat</a></li>
-                                    <li class="menu-item"><a href="bucks.html">Milwaukee Bucks</a></li>
-                                    <li class="menu-item"><a href="timberwolves.html">Minnesota Timberwolves</a></li>
-                                    <li class="menu-item"><a href="pelicans.html">New Orleans Pelicans</a></li>
-                                    <li class="menu-item"><a href="knicks.html">New York Knicks</a></li>
-                                    <li class="menu-item"><a href="thunder.html">Oklahoma City Thunder</a></li>
-                                    <li class="menu-item"><a href="magic.html">Orlando Magic</a></li>
-                                    <li class="menu-item"><a href="76ers.html">Philadelphia 76ers</a></li>
-                                    <li class="menu-item"><a href="suns.html">Phoenix Suns</a></li>
-                                    <li class="menu-item"><a href="blazers.html">Portland Trail Blazers</a></li>
-                                    <li class="menu-item"><a href="kings.html">Sacramento Kings</a></li>
-                                    <li class="menu-item"><a href="spurs.html">San Antonio Spurs</a></li>
-                                    <li class="menu-item"><a href="raptors.html">Toronto Raptors</a></li>
-                                    <li class="menu-item"><a href="jazz.html">Utah Jazz</a></li>
-                                    <li class="menu-item"><a href="wizards.html">Washington Wizards</a></li>
-                                  </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <p>
-                                            <span class="custom">Players</span>
-                                            
-                                            <b class="caret"></b>
-                                        </p>
-    
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <li class="menu-item"><a href="Players2015_2016.html">Players2015-2016</a></li>
-                                    <li class="menu-item"><a href="Players2016_2017.html">Players2016-2017</a></li>
-                                    <li class="menu-item"><a href="Players2017_2018.html">Players2017-2018</a></li>
-                                    <li class="menu-item"><a href="Players2018_2019.html">Players2018-2019</a></li>
-                                    <li class="menu-item"><a href="Players2019_2020.html">Players2019-2020</a></li>
-                                  </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <p>
-                                            <span class="custom">Seasons</span>
-                                            
-                                            <b class="caret"></b>
-                                        </p>
-    
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <li class="menu-item"><a href="season_15_16.html">2015 - 2016</a></li>
-                                    <li class="menu-item"><a href="season_16_17.html">2016 - 2017</a></li>
-                                    <li class="menu-item"><a href="season_17_18.html">2017 - 2018</a></li>
-                                    <li class="menu-item"><a href="season_18_19.html">2018 - 2019</a></li>
-                                    <li class="menu-item"><a href="season_19_20.html">2019 - 2020</a></li>
-                                  </ul>
-                            </li>
-                        </ul>
-            </nav>
-    
-        </div>
-        
-        
-        
-        
-        <div class="content">
-            <div class="container-fluid">
-        
-                
-        
-        
-        
-                <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-right">
-                    <ul>
-                        <li>
-                            <a href="/">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="templates\team.html">
-                                Meet Our Team
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Denbigh97/Project_2_Red_Team">
-                                GitHub Repository
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-left">
-                     <a>Project_2_Red_Team</a>
-                </p>
-                <div class="infogram-embed" data-id="4db516b9-8f01-499b-be80-89d3c1820deb" data-type="interactive" data-title="NBA"> </div>
-                    <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
-                    </script>
-            </div>
-        </footer>
-
-    </div>
-    
+  <script type="text/javascript">
+    //put your code here
+    $(function() {
+  $("input[name*='num']").on("change", function() {
+    var total = 0;
+    $("input[type='checkbox']:checked").each(function() {
+      total += Number($(this).val());
+    });
+    $("#total").val(total);
+  });
+});
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<h3>
+    <u>Player Stats to Predict Salaries</u>
+  </h3>
+  
+  <h4>
+    <u>Choose one from each category</u>
+  </h4>
+  <br>
+  
+  <form action="">
+    <h5>
+      <u>POSITION</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>AGE</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>FIELDGOAL PERCENTAGE</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>3 POINT PERCENTAGE</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>2 POINT PERCENTAGE</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>REBOUND AVG</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>ASSIST AVG</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    <h5>
+      <u>POINT AVG</u>
+    </h5>
+    <input type="checkbox" name="pos" value="3">PG<br>
+    <input type="checkbox" name="pos" value="1">SG<br>
+    <input type="checkbox" name="pos" value="2">SF<br>
+    <input type="checkbox" name="pos" value="2">PF<br>
+    <input type="checkbox" name="pos" value="1">C<br>
+  
+    Total <input type="text" value="0" id="total">
+  </form>
 </body>
-
-    <!--   Core JS Files   -->
-    <script src="https://nba-projectred.herokuapp.com/static/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<!-- <script src="static\assets\js\bootstrap.min.js" type="text/javascript"></script> -->
-    <script src="https://nba-projectred.herokuapp.com/static/assets/js/bootstrap.min.js"></script>
-	<!--  Charts Plugin -->
-	<script src="https://nba-projectred.herokuapp.com/static/assets/js/chartist.min.js"></script>
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="https://nba-projectred.herokuapp.com/static/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-    <!-- create data table from by using cleansed data csv -->
-    <script src="https://nba-projectred.herokuapp.com/static/assets/js/dashboard.js"></script>
-    <!-- Choropleth JS -->
-    <script src="static/assets/js/data.js"></script>
-    <script src="static/assets/js/app.js"></script>
-    <!-- Pie Plot JS -->
-    <script type="text/javascript" src=""></script>
 
 </html>
