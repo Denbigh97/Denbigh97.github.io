@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>PUT A TITLE HERE</title>
+	<title>PUT A TITLE HERE</title>
 </head>
-
 <body>
-  <canvas id="canvas" width="200" height="200"></canvas>
-
-  <script type="text/javascript">
-    //put your code here
+	<canvas id="canvas" width="200" height = "200"></canvas>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
     $(function() {
   $("input[name*='num']").on("change", function() {
     var total = 0;
@@ -19,92 +16,82 @@
     $("#total").val(total);
   });
 });
-  </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<h3>
-    <u>Player Stats to Predict Salaries</u>
-  </h3>
-  
-  <h4>
-    <u>Choose one from each category</u>
-  </h4>
-  <br>
-  
-  <form action="">
+        //put your code here
+        
+    </script>
+    
+    <h3>
+        <u>PICK ONE FROM EACH GROUP</u>
+    </h3>
+    
+    
+    <br>
     <h5>
-      <u>POSITION</u>
+        <u>POSITION</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>AGE</u>
+    <form action="">
+      <input type="checkbox" name="num3" value="3">PG<br>
+      <input type="checkbox" name="num1" value="1">SG<br>
+      <input type="checkbox" name="num2" value="2">SF<br>
+      <input type="checkbox" name="num2" value="2">PF<br>
+      <input type="checkbox" name="num1" value="1">C<br>
+      <h5>
+        <u>AGE</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>FIELDGOAL PERCENTAGE</u>
+      <input type="checkbox" name="num1" value="1">18-22<br>
+      <input type="checkbox" name="num2" value="2">23-26<br>
+      <input type="checkbox" name="num3" value="3">27-30<br>
+      <input type="checkbox" name="num2" value="2">31-34<br>
+      <input type="checkbox" name="num1" value="1">35&UP<br>
+      <h5>
+        <u>FG%</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>3 POINT PERCENTAGE</u>
+      <input type="checkbox" name="num1" value="1">0-37<br>
+      <input type="checkbox" name="num2" value="2">37.1-42<br>
+      <input type="checkbox" name="num3" value="3">42.1-47<br>
+      <input type="checkbox" name="num4" value="4">47.1-52<br>
+      <input type="checkbox" name="num5" value="5">52.1&UP<br>
+      <h5>
+        <u>3P%</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>2 POINT PERCENTAGE</u>
+      <input type="checkbox" name="num1" value="1">0-25<br>
+      <input type="checkbox" name="num2" value="2">25.1-32<br>
+      <input type="checkbox" name="num3" value="3">32.1-36<br>
+      <input type="checkbox" name="num4" value="4">36.1-40<br>
+      <input type="checkbox" name="num5" value="5">40.1&UP<br>
+      <h5>
+        <u>2P%</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>REBOUND AVG</u>
+      <input type="checkbox" name="num1" value="1">0-38<br>
+      <input type="checkbox" name="num2" value="2">38.1-46<br>
+      <input type="checkbox" name="num3" value="3">46.1-53<br>
+      <input type="checkbox" name="num4" value="4">53.1-60<br>
+      <input type="checkbox" name="num5" value="5">60.1&UP<br>
+      <h5>
+        <u>REBOUND</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>ASSIST AVG</u>
+      <input type="checkbox" name="num1" value="1">0-2<br>
+      <input type="checkbox" name="num2" value="2">2.1-4<br>
+      <input type="checkbox" name="num3" value="3">4.1-6<br>
+      <input type="checkbox" name="num4" value="4">6.1-8.4<br>
+      <input type="checkbox" name="num5" value="5">8.5&UP<br>
+      <h5>
+        <u>ASSIST</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    <h5>
-      <u>POINT AVG</u>
+      <input type="checkbox" name="num1" value="1">0-2<br>
+      <input type="checkbox" name="num2" value="2">2.1-4<br>
+      <input type="checkbox" name="num3" value="3">4.1-6<br>
+      <input type="checkbox" name="num4" value="4">6.1-8<br>
+      <input type="checkbox" name="num5" value="5">8.1&UP<br>
+      <h5>
+        <u>POINTS</u>
     </h5>
-    <input type="checkbox" name="pos" value="3">PG<br>
-    <input type="checkbox" name="pos" value="1">SG<br>
-    <input type="checkbox" name="pos" value="2">SF<br>
-    <input type="checkbox" name="pos" value="2">PF<br>
-    <input type="checkbox" name="pos" value="1">C<br>
-  
-    Total <input type="text" value="0" id="total">
-  </form>
+      <input type="checkbox" name="num1" value="1">0-6.9<br>
+      <input type="checkbox" name="num2" value="2">7-12.9<br>
+      <input type="checkbox" name="num3" value="3">13-18.9<br>
+      <input type="checkbox" name="num4" value="4">19-24.9<br>
+      <input type="checkbox" name="num5" value="5">25&UP<br>
+      Total <input type="text" value="0" id="total">
+    </form>
 </body>
-
 </html>
