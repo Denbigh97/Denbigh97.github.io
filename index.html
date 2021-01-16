@@ -43,12 +43,12 @@ $(document).ready(function(){
  $.ajaxSetup({ cache: false });
  $('#search').keyup(function(){
   $('#result').html('');
-  $('#state').val('');
+  $('#pos').val('');
   var searchField = $('#search').val();
   var expression = new RegExp(searchField, "i");
-  $.getJSON('https://github.com/Denbigh97/Denbigh97.github.io/blob/main/Playercontracts.json', function(data) {
+  $.getJSON('Playercontracts.json', function(data) {
    $.each(data, function(key, value){
-    if (value.player.search(expression) != -1)
+    if (value.player.search(expression) != -1 || value.pos.search(expression) != -1)
     {
      $('#result').append('<li class="list-group-item link-class"> '+value.player+' | <span class="text-muted">'+value.pos+'</span><span class="text-muted">'+value.age+'</span><span class="text-muted">'+value.team+'</span><span class="text-muted">'+value.game+'</span><span class="text-muted">'+value.3p+'</span><span class="text-muted">'+value.2p+'</span><span class="text-muted">'+value.reb+'</span><span class="text-muted">'+value.ast+'</span><span class="text-muted">'+value.pts+'</span><span class="text-muted">'+value.year+'</span><span class="text-muted">'+value.2020contract+'</span></li>');
     }
