@@ -30,7 +30,7 @@
    <h3 align="center">CONTRACT & STAT DATA</h3>   
    <br /><br />
    <div align="center">
-    <input type="text" name="search" id="search" placeholder="Search Employee Details" class="form-control" />
+    <input type="text" name="search" id="search" placeholder="Search Player Details" class="form-control" />
    </div>
    <ul class="list-group" id="result"></ul>
    <br />
@@ -46,7 +46,7 @@ $(document).ready(function(){
   $('#state').val('');
   var searchField = $('#search').val();
   var expression = new RegExp(searchField, "i");
-  $.getJSON('Playercontracts.json', function(data) {
+  $.getJSON('https://github.com/Denbigh97/Denbigh97.github.io/blob/main/Playercontracts.json', function(data) {
    $.each(data, function(key, value){
     if (value.player.search(expression) != -1 || value.pos.search(expression) != -1)
     {
