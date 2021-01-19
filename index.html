@@ -46,7 +46,7 @@ $(document).ready(function(){
   $('#pos').val('');
   var searchField = $('#search').val();
   var expression = new RegExp(searchField, "i");
-  $.getJSON('Playercontracts.json', function(data) {
+  $.getJSON('data.json', function(data) {
    $.each(data, function(key, value){
     if (value.player.search(expression) != -1 || value.pos.search(expression) != -1)
     {
