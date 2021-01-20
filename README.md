@@ -1,2 +1,1 @@
-# Denbigh97.github.io
-stats
+# Web-Design-Challenge
