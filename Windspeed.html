@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- width=device-width sets the width of the page to follow the screen-width of the device -->
+    <!-- initial-scale=1 sets the initial zoom level when the page is first loaded-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Personalizing CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>WindSpeed Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+     <!-- Adding brand text with image to the navbar-->
+      <a class="navbar-brand mb-0 h1 text-white" href="index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Weather-sun-clouds-rain.svg/768px-Weather-sun-clouds-rain.svg.png" 
+                  width="40" height="40" class="d-inline-block align-top" alt="weather_logo" loading="lazy">
+        Lattitude
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Aligning the navbar to the left-->
+        <ul class="navbar-nav ml-auto">
+          <!-- Create the dropdown list -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+              <div 
+                class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="MaxTemp.html">Max Temperature</a>
+                <a class="dropdown-item" href="Humidity.html">Humidity</a>
+                <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
+                <a class="dropdown-item" href="WindSpeed.html">Wind Speed</a>
+              </div>
+          </li>  
+          <!-- Create Comparison link -->       
+          <li class="nav-item active">
+            <a class="nav-link" href="Comparison.html">
+              Comparison <span class="sr-only">(current)
+                          </span>
+            </a>
+          </li>
+          <!-- Create Data link -->
+          <li class="nav-item active">
+            <a class="nav-link" href="Data.html">
+              Data <span class="sr-only">(current)
+                   </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--ARIA role of "main" added for IE11 and lower -->
+    <main role="main">
+    <!-- Customizing Jumbotron component-->
+    <div class="jumbotron_Comp jumbotron-fluid">
+      <div class="container-fluid">
+          <h2 class="display-4">Wind Speed</h2>
+      </div>
+    </div>
+    <!--Responsive container---->
+     <!-- Creating space between columns & aligning them to top -->
+        <div class="container-fluid my-MaxTemp_container">
+          <!-- Creating space between columns & aligning them to top -->
+        <div class="row justify-content-between align-items-start my-row">
+          <!-- Defining first column for medium and small screens ---->
+          <!-- If needed change the order number for small screens to exchange columns-->
+            <div class ="col-md-9 col-sm-6 order-md-2">
+            <!-- Responsive image automatically adjust to fit the size of screen-->
+            <img src="Resources/Latitude_WindSpeed.png" class="feature-img" alt="Wind Speed Picture"> 
+                <!-- Formatted text-->
+                <p class = "headline"> Northern Hemisphere more windier than the Southern Hemisphere</p>
+                <p><span class="span-text">W</span> &nbsp; ind Speed is a fundamental atmosphere quantity caused by air moving from high to low pressure <br> 
+                  <strong>Wind Speed</strong> is affected by a number of factors like <strong>pressure gradient</strong>, <strong> Jet streams</strong>, <strong>Rossby waves</strong> 
+                  and local weather conditions <br> This data was collected on <strong>22nd July</strong> which corresponds to peak summer in the
+                  Northern Hemisphere.<br> During the Northern Hemisphere summer, <strong>easterly jets</strong> can form in tropical regions, typically where dry air encounters 
+                  more humid air at high altitudes.<br> As we can see in the figure, <strong>highest wind speed</strong> is observed in the Northern Hemisphere. <br> Summer season is also the onset of 
+                  hurricanes and atmospheric disturbances which result in higher wind speeds in the Northern Hemisphere.
+                </p>
+            </div>
+            <!-- Defining second column for medium and small screens---->
+            <div class ="col-md-3 col-sm-6 my-col order-md-12">
+              <!-- Creating a formatted display text-->
+             <div class = "container-fluid my-box">
+                <h3>VISUAL IZATIONS</h3>
+              </div>  
+              <hr class="style-eight"/>
+                <div class="container-fluid">
+                  <!-- Creating space between columns & aligning them to top -->
+                    <div class="row justify-content-between align-items-start my-row">
+                      <!-- Defining first column for medium and small screens ---->
+                      <!-- If needed change the order number for small screens to exchange columns-->
+                        <div class ="col-md-6 col-sm-6 viz-col">
+                         <!-- Responsive image automatically adjust to fit the size of screen-->
+                          <div class = "my_header_A"> Max Temp vs. Latitude </div> 
+                          <a href="MaxTemp.html">
+                              <img class = "Viz_Thumbnail" src="Resources/Latitude_MaxTemp.png" class="img-thumbnail" alt="MaxTemp">
+                          </a>
+                        </div>  
+                        <div class ="col-md-6 col-sm-6 viz-col">
+                          <!-- Responsive image automatically adjust to fit the size of screen-->
+                            <div class = "my_header_A"> Humidity vs. Latitude </div> 
+                            <a href="Humidity.html">
+                                <img class = "Viz_Thumbnail" src="Resources/Latitude_Humidity.png" class="img-thumbnail" alt="Humidity">
+                            </a>
+                        </div>
+                    </div>    
+                    <div class="row justify-content-between align-items-start my-row">
+                      <!-- Defining first column for medium and small screens ---->
+                      <!-- If needed change the order number for small screens to exchange columns-->
+                        <div class ="col-md-6 col-sm-6 viz-col">
+                          <!-- Responsive image automatically adjust to fit the size of screen-->
+                            <div class = "my_header_A"> Cloudiness vs. Latitude </div> 
+                            <a href="Cloudiness.html">
+                                <img class = "Viz_Thumbnail" src="Resources/Latitude_Cloudiness.png" class="img-thumbnail" alt="Cloudiness">
+                            </a>
+                        </div>
+                        <div class ="col-md-6 col-sm-6 viz-col">
+                          <!-- Responsive image automatically adjust to fit the size of screen-->
+                              <div class = "my_header_A"> Wind Speed vs. Latitude </div> 
+                              <a href="WindSpeed.html">
+                                  <img class = "Viz_Thumbnail" src="Resources/Latitude_WindSpeed.png" class="img-thumbnail" alt="WindSpeed">
+                              </a>
+                        </div>
+                    </div>    
+                </div>      
+         </div>
+        </div>    
+          
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </main>
+  <footer>
+    <div class="row justify-content-between align-items-start my-row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <!--<p class = "footer-text">Copyright <span>&#169;</span> Bootcamp 2020 </p>--> 
+          <a class="footer-text" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Weather-sun-clouds-rain.svg/768px-Weather-sun-clouds-rain.svg.png" 
+              width="50" height="50"  alt="weather_logo" loading="lazy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright <span>&#169;</span> Coding Bootcamp 2020</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+  </footer>
+  </body>
+</html>

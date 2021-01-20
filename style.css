@@ -1,0 +1,343 @@
+/* Customizing body */
+body{
+    font-family: "sans-serif",sans-serif,Arial, Helvetica;
+    font-size: 100%;
+    background-color: whitesmoke;
+    margin: auto;
+    padding:relative;
+  }
+  /* Customizing dropdown */
+  .dropdown-item {
+    color:black;
+  }
+  .dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: yellowgreen;
+    font-size: 150%;
+  }
+  /* Customizing paragraph */
+  p{
+    color:darkgreen;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', sans-serif;
+    text-align:justify;
+    font-size: 1.1em;
+    line-height: 200%;
+  }
+  /* Paragraph style for comparison page */
+  .my-p{
+    color:whitesmoke;
+    background-color: rgb(156, 146, 7);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.2em;
+    text-align:center;
+    font-weight: bolder;
+  }
+  /* Customizing header 1 */
+  h1{
+    color:white;
+    font-size:1.875em;
+  }
+  /* Customizing header 2 */
+  h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    font-size:1.7em;
+  }
+  
+  /* Customizing visualization header */
+  .my_header_A{
+    color:rgb(155, 86, 3);
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  /* Customizing Comparison chart header */
+  .my_header_top{
+    color:white;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    background-color: darkgreen;
+    font-size: 1.5em;
+  }
+  .my_header_bottom{
+    color:rgb(5, 58, 55);
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  /* Customizing header for MaxTemp page */
+  .headline{
+    color:darkgreen;
+    font-family: "Arial Narrow", Arial, Impact, sans-serif;
+    font-weight: 800;
+    text-align: left;
+    line-height: 120%;
+    font-size: 2.2em;
+  }
+  /* Customizing Image */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* CSS Transition for thumbnails */
+  .Viz_Thumbnail:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    filter: saturate(8) drop-shadow(8px 8px 10px gray);
+    -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+  } 
+  .navbar{
+    position : relative;
+    background-color: white;
+    width:100%;
+    font-size:1.25em; /*20px/16 = 1.875*/
+    font-weight:bold;
+    padding:0;
+  }
+  .navbar-brand{
+    font-family: "Georgia","Book Antiqua",serif;
+    font-size:1.875em; /*30px/16 = 1.875*/
+    font-weight:bolder;
+    background-color: rgb(51,161,157);
+    padding:5px;
+    margin-left:10%;
+  }
+  /* Customizing Jumbotron for Landing Page */
+  .jumbotronL{
+    content:"";
+    display: block;
+    padding: 10px;
+    background-image: url(https://latlongmaptest.opened.ca/wp-content/uploads/sites/716/2019/06/opened-mapping-banner-2000x600.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+    width:100%;
+    height:100%;
+    opacity:0.9;
+    z-index:-1;
+  }
+  /* Customizing Jumbotron for Comparison Page */
+  .jumbotron_Comp{
+    content:"";
+    display: block;
+    padding: 5px;
+    background-image: url(https://latlongmaptest.opened.ca/wp-content/uploads/sites/716/2019/06/opened-mapping-banner-2000x600.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+    width:100%;
+    height:100%;
+    opacity:0.7;
+    z-index:-1;
+  }
+  /* Styling horizontal line */
+  .style-eight {
+    height: 10px;
+    border: 1px;
+    box-shadow: inset 0 9px 9px -3px rgba(231, 178, 4, 0.918);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    }
+  .display-2{
+    color: white;
+    font-size:5em;
+  }
+  .lead{
+    color: white;
+    font-size:1.5em; 
+  }
+  .my-container{
+    background-color: rgb(216, 240, 216);
+    height:auto;
+    width:80%;
+    position:relative;
+  }
+  .my-row{
+    border: 0px solid white;
+  }
+  .my-col{
+    border: 5px solid white;
+    background-color: lightgoldenrodyellow;
+  }
+  /* Customizing Box */
+  .my-box{
+    background-color: lightgoldenrodyellow;
+    color: darkgreen;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', sans-serif;
+    font-weight:normal;
+    font-size:1.1em;
+    margin:10px;
+  }
+  .my-box h3{
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight:bolder;
+  }
+  /* Customizing Column for Visualization */
+  .viz-col{
+    background-color: lightgoldenrodyellow;
+    padding-bottom: 15px ;
+    padding-top: 15px;
+    padding-left:5px;
+    padding-right:5px;
+  }
+  /* Customizing Footer */
+  footer {
+    background-color:darkolivegreen;
+    padding-top:2px;
+    padding-bottom:2px;
+  }
+  /* Footer text */
+  .footer-text{
+    color: white;
+    word-spacing: 2px;
+    font-size: 1.1em;
+    text-decoration: none;
+  }
+  /* Stylizing footer text during hover */
+  .footer-text, .footer-text:hover
+  {   text-decoration: none;
+  color: white;}
+  
+  /* Customizing hover */
+  li a {
+    color: #fff;
+  }
+  li:hover,
+  li:focus-within {
+      background: orange;
+      cursor: pointer;
+  }
+  li:focus-within a {
+    outline: none;
+  }
+  ul li ul {
+      background: orange;
+      visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+      position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+      left: 0;
+    display: none;
+  }
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+  }
+  ul li ul li {
+      clear: both;
+    width: 100%;
+  }
+  
+  /* Span Style */
+  .span-text {
+    float: left;
+    width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;
+  }
+  /* Feature Image */
+  .feature-img {
+    float:left;
+    padding-right:20px;
+  }
+  .feature-img:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    filter: sepia(50%) drop-shadow(8px 8px 10px gray);
+    -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+  }
+  /* Stylizing Comparison container */
+  .my-comp_container{
+    background-image: url(https://images.assetsdelivery.com/compings_v2/natylia/natylia1912/natylia191200092.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:auto;
+    width:50%;
+    position:relative;
+  }
+  /* Stylizing Max Temp container */
+  .my-MaxTemp_container{
+    background-color: rgb(216, 240, 216);
+    height:auto;
+    width:100%;
+    position:relative;
+  }
+  /* Customizing hover table */
+  .hoverTable {
+      width: 100%;
+      border-collapse:collapse;
+  }
+  .hoverTable th{
+    text-align: left;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', sans-serif;
+    font-weight: bolder;
+    color: darkgreen;
+  }
+  .hoverTable tr:hover {
+    background-color: darkkhaki;
+  }
+  
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .display-2{color: yellow;font-size:5em;}
+    .lead{color: yellow; word-spacing: 0px;font-size:1.0em;}
+    h2{color: rgb(217, 230, 43);word-spacing: 0px;font-size:1.0em;}
+    .my-p{color:darkgreen;font-size:1.0em;background-color:whitesmoke}
+    .my-box h3{color:salmon;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .display-2{color: rgb(217, 230, 43);font-size:5em;}
+    .lead{color: rgb(217, 230, 43);word-spacing: 0px;font-size:1.1em;}
+    h2{color: rgb(217, 230, 43);word-spacing: 0px;font-size:1.0em;}
+    .my-p{color:darkblue;font-size:1.0em;background-color:whitesmoke}
+    .my-box h3{color:rgb(118, 142, 216);text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .display-2{color:orange;font-size:5em;}
+    .lead{color: orange;word-spacing: 0px;font-size:1.2em;}
+    h2{color: orange;word-spacing: 0px;font-size:1.3em;}
+    .my-p{color:darkorchid;font-size:1.1em;background-color: whitesmoke}
+    .my-box h3{color: rgb(118, 142, 216);text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .display-2{color: white;font-size:5em;}
+    .lead{color: white;font-size:1.5em;}
+    h2{color: whitesmoke;font-size:1.7em;}
+    .my-p{color:whitesmoke;font-size:1.2em;background-color: rgb(156, 146, 7);}
+    .my-box h3{color: orange;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .display-2{color: white;font-size:5em;}
+    .lead{color: white;font-size:1.5em;}
+    h2{color: whitesmoke;font-size:1.7em;}
+    .my-p{color:whitesmoke;font-size:1.2em;background-color: rgb(156, 146, 7);}
+    .my-box h3{color: orange;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+  }
